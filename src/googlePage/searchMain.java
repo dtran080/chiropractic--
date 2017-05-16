@@ -31,8 +31,8 @@ public class searchMain extends JFrame{
 	private String cx = "008146553695872254382:hrkred5fziw";
 	private String api = "AIzaSyDdz1733p7cqS5-VlyIVY16gex9GY2qIFo";
 	public searchMain(){
-		screenWidth = Toolkit.getDefaultToolkit().getScreenSize().width;
-		screenHeight = Toolkit.getDefaultToolkit().getScreenSize().height;
+		screenWidth = 800;//Toolkit.getDefaultToolkit().getScreenSize().width*8/10;
+		screenHeight = 700;//Toolkit.getDefaultToolkit().getScreenSize().height*8/10;
 		urlList = new ArrayList<String>();
 		resultDisplayed = false;
 		font = new Font("Serif",Font.BOLD,12);
