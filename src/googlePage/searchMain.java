@@ -121,6 +121,7 @@ public class searchMain extends JFrame {
             }
         });
         add(searchBox);
+
 		//resultBox
 
         resultBox.setBounds(0, 0, screenWidth, screenHeight);
