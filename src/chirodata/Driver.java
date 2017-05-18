@@ -2,6 +2,7 @@ package chirodata;
 import java.sql.*;
 import java.util.*;
 import org.sqlite.*;
+import GoogleSearch.*;
 public class Driver {
 	private static List<String> websites;
 	public static void main(String[] args) throws ClassNotFoundException, SQLException{
@@ -9,7 +10,7 @@ public class Driver {
 	    Class.forName(sDriverName);
 	    websites= new ArrayList<String>();
 	    // now we set up a set of fairly basic string variables to use in the body of the code proper
-	    String sTempDb = "chiro1.sqlite";
+	    String sTempDb = "src/chiro1.sqlite";
 	    String sJdbc = "jdbc:sqlite";
 	    String sDbUrl = sJdbc + ":" + sTempDb;
 	    // which will produce a legitimate Url for SqlLite JDBC :
@@ -105,20 +106,6 @@ public class Driver {
         record
     )
 );*/
-		 String[] keywords={ "DC","doctor", "license number","links: ", "DCs", "details in record",
-	    "identy of author known","author",
-	    "web","designer",    "subluxation", "comment", "sublaxation complex",
-	    "vertex","vertebrae", "VSC", "comment", "description",
-	    "picture", /*picture found*/  "Nerve system", "N Interference", "Warning signs",
-	    "Meric Chart", "principled", "straight", "Wellness",
-	    "Wellness library","nondrug", "drugless",
-	    "Innate universal intelligence","Innate","universal","intelligence",
-	    "Vitalism Vitalistic", "vitalism","vitalistic",
-	    "Religious content","evangelical","god","religion","bible","christian",
-	    "subluxation", "NMS",  "sports injury",  "WC",  "sprain strain",  "PI",  "whiplash", 
-	    "SRD", "Other non MSK", "MSK", "allergy sensitivity", "asthma", "otitis media ear infection",
-	    "colic", "ADHD", "comment 4", "Spine disease", "Maintenance prevention",
-	    "wellness care","superior outcomes","Rx Surgery Bad","Vaccination","stroke risk","marketing tactics","marketing","market"};
 		/*String[][] keywords1={ {sql_column,keywords,(if_yes_who,comment}
 				{"identity_of_author_known","author","book","if_yes_who"},
 				{"Chiro_specific_web_designer","web","designer"},
@@ -160,6 +147,8 @@ public class Driver {
 		kw.put("Other_non_MSK", new String[]{"non MSK"});
 		kw.put("allergy_sensitivity", new String[]{"allergy sensitivity"});
 		kw.put("asthma", new String[]{"asthma"});
+		
+		URLExtract extractWeb = new URLExtract();
 	}
 }
 
